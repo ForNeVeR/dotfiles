@@ -11,6 +11,13 @@
 	    (setq indent-tabs-mode t)
 	    (setq tab-width 4)))
 
+;; c++-mode:
+(add-hook 'c++-mode-hook
+	  (lambda ()
+	    (setq indent-tabs-mode t)
+	    (setq tab-width 4)
+	    (setq c-basic-offset 4)))
+
 ;; column-mode:
 (require 'column-marker)
 ; For enableing in foo-mode:
