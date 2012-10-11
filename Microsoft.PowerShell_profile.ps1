@@ -106,10 +106,14 @@ function emacs($filename) {
 
     # If parameter is not defined, just find emacs window and send it to front:
     if (!$filename) {
-        $emacsPid = (Get-Content $serverFile)[0].Split(' ')[1]
-	$process = Get-Process -Id $emacsPid
-	$windowHandle = $process.MainWindowHandle
-	Send-WindowToFront $windowHandle
+		if (Test-Path $serverFile) {
+			$emacsPid = (Get-Content $serverFile)[0].Split(' ')[1]
+			$process = Get-Process -Id $emacsPid
+			$windowHandle = $process.MainWindowHandle
+			Send-WindowToFront $windowHandle
+		} else {
+			& $emacs
+		}
     } else {
         & $emacsClient -f $serverFile -a $emacs (Safe-Resolve-Path $filename)
     }
