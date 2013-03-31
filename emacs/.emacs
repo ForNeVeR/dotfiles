@@ -1,46 +1,22 @@
-;; Manage elisp packages:
-(add-to-list 'load-path "~/.emacs.d")
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;; Add in your own as you wish:
+(defvar my-packages '(starter-kit starter-kit-lisp scala-mode2)
+  "A list of packages to ensure are installed at launch.")
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
 
 ;; linum-mode:
 (global-linum-mode 1)
-
-;; powershell-mode:
-(require 'powershell-mode)
-(add-hook 'powershell-mode-hook
-	  (lambda ()
-	    (setq indent-tabs-mode t)
-	    (setq tab-width 4)))
-
-;; c++-mode:
-(add-hook 'c++-mode-hook
-	  (lambda ()
-	    (setq indent-tabs-mode t)
-	    (setq tab-width 4)
-	    (setq c-basic-offset 4)))
-
-;; column-mode:
-(require 'column-marker)
-; For enableing in foo-mode:
-;(add-hook 'foo-mode-hook (lambda () (interactive) (column-marker-1 80)))
-;(global-set-key [?\C-c ?m] 'column-marker-1)
-
-;; savehist-mode:
-(setq savehist-additional-variables
-  '(search-ring regexp-search-ring)
-  savehist-file "~/.emacs.d/savehist")
-(savehist-mode t)
-
-;; Autoload:
-(setq auto-mode-alist (cons '("\\.ps1$" . powershell-mode) auto-mode-alist))
-
-;; Custom variables:
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-  '(desktop-enable t nil (desktop))
-  '(save-place t nil (saveplace)))
-
 ;; Start emacs server:
 (server-start)
