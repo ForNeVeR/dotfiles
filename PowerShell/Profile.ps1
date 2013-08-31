@@ -2,15 +2,16 @@ param(
 	$Options
 )
 
+$env:HOME = Resolve-Path ~
+$env:USERNAME = $Options.UserName
+
 function Resolve-PathSafe($path) {
 	$PSCmdlet.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
 }
 
-$env:HOME = Resolve-Path ~
 New-Alias emacs $Options.emacs
 
 function emacsclient($path) {
-	$emacs = $Options.emacs
 	$emacsclient = $Options.emacsclient
 
 	try {
@@ -20,6 +21,6 @@ function emacsclient($path) {
 
 	& $emacsclient `
 		--server-file "$env:HOME/.emacs.d/server/server" `
-		--alternate-editor $emacs `
+		--alternate-editor $Options.emacs `
 		$path
 }
