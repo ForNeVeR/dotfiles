@@ -20,6 +20,7 @@ function emacsclient($path) {
 	}
 
 	& $emacsclient `
+		-n `
 		--server-file "$env:HOME/.emacs.d/server/server" `
 		--alternate-editor $Options.emacs `
 		$path
