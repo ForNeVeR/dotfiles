@@ -5,6 +5,11 @@ param(
 $env:HOME = Resolve-Path ~
 $env:USERNAME = $Options.UserName
 
+function prompt {
+	Write-Host "PS $(Get-Location)>" -NoNewline -ForegroundColor White
+	' '
+}
+
 function Resolve-PathSafe($path) {
 	$PSCmdlet.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
 }
