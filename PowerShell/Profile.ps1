@@ -30,3 +30,8 @@ function emacsclient($path) {
 		--alternate-editor $Options.emacs `
 		$path
 }
+
+if ($Host.Name -eq 'ConsoleHost')
+{
+    Import-Module PSReadline
+}
