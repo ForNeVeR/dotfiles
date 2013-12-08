@@ -1,25 +1,25 @@
 (require 'cl)
+(require 'package)
 
 (server-start)
 
-(setq my-packages '(batch-mode gruber-darker-theme multiple-cursors paredit powershell))
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+(setq my-packages '(batch-mode
+					graphviz-dot-mode
+					gruber-darker-theme
+					multiple-cursors
+					paredit
+					powershell
+					scala-mode
+					fsharp-mode))
 (loop for p in my-packages
       when (not (package-installed-p p))
       do (package-install p))
 
 (add-to-list 'process-coding-system-alist
              '("powershell.exe" . (cp866-dos . cp866-dos)))
-
-;; Automatically save and restore sessions:
-(setq desktop-dirname             "~/.emacs.d/desktop/"
-      desktop-base-file-name      "emacs.desktop"
-      desktop-base-lock-name      "lock"
-      desktop-path                (list desktop-dirname)
-      desktop-save                t
-      desktop-files-not-to-save   "^$" ;reload tramp paths
-      desktop-load-locked-desktop nil)
-(desktop-save-mode 1)
-(desktop-read)
 
 ;; Fix the shift-selection broken by the starter kit:
 (global-unset-key (kbd "S-<left>"))
@@ -39,17 +39,25 @@
 (add-to-list 'auto-mode-alist '("\\.cmd\\'" . batch-mode))
 (add-to-list 'auto-mode-alist '("\\.bat\\'" . batch-mode))
 
+;; proof general
+(load "ProofGeneral-4.2/generic/proof-site.el")
+
 ;; multiple-cursors
 (require 'multiple-cursors)
 (global-set-key (kbd "M-C-<up>") 'mc/mark-previous-like-this)
 (global-set-key (kbd "M-C-<down>") 'mc/mark-next-like-this)
 
-(load-theme 'gruber-darker)
+;; cua-mode
+(cua-mode)
+
+;; Theme and menus:
+(load-theme 'gruber-darker t)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
+;; Global editor settings:
 (setq default-file-name-coding-system 'cp1251)
 (setq file-name-coding-system 'cp1251)
 
 (setq-default indent-tabs-mode t)
 (setq default-tab-width 4)
-
-(tool-bar-mode -1)
-(menu-bar-mode -1)
