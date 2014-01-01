@@ -12,8 +12,7 @@
 					multiple-cursors
 					paredit
 					powershell
-					scala-mode
-					fsharp-mode))
+					scala-mode))
 (loop for p in my-packages
       when (not (package-installed-p p))
       do (package-install p))
