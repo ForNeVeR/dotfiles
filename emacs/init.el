@@ -35,6 +35,7 @@
   (add-to-list 'load-path current-directory))
 (load "PowerShell-Mode.el")
 (add-to-list 'auto-mode-alist '("\\.ps1\\'" . powershell-mode))
+(add-to-list 'auto-mode-alist '("\\.psm1\\'" . powershell-mode))
 (add-to-list 'auto-mode-alist '("\\.cmd\\'" . batch-mode))
 (add-to-list 'auto-mode-alist '("\\.bat\\'" . batch-mode))
 
