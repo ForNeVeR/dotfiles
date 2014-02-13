@@ -27,6 +27,9 @@
 (global-unset-key (kbd "S-<down>"))
 (setq shift-select-mode t)
 
+;; Fix the auto-fill-mode starting in the starter kit:
+(remove-hook 'text-mode-hook #'turn-on-auto-fill)
+
 ;; linum-mode:
 (global-linum-mode 1)
 
