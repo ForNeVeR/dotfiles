@@ -11,8 +11,7 @@
 					gruber-darker-theme
 					multiple-cursors
 					paredit
-					powershell
-					scala-mode))
+					powershell))
 (loop for p in my-packages
       when (not (package-installed-p p))
       do (package-install p))
