@@ -31,7 +31,11 @@ function emacsclient($path) {
 		$path
 }
 
-if ($Host.Name -eq 'ConsoleHost')
-{
+if ($Host.Name -eq 'ConsoleHost') {
     Import-Module PSReadline
+}
+
+function atom($file) {
+	$argument = '"' + (Resolve-Path $file) + '"'
+	Start-Process atom $argument
 }
