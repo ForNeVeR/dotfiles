@@ -35,7 +35,7 @@ if ($Host.Name -eq 'ConsoleHost') {
     Import-Module PSReadline
 }
 
-function atom($file) {
-	$argument = '"' + (Resolve-Path $file) + '"'
+function atom($path) {
+	$argument = '"' + ([System.IO.Path]::GetFullPath($path)) + '"'
 	Start-Process atom $argument
 }
