@@ -11,7 +11,7 @@ function prompt {
 }
 
 function Resolve-PathSafe($path) {
-	$PSCmdlet.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
+	$ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
 }
 
 New-Alias emacs $Options.emacs
@@ -36,6 +36,6 @@ if ($Host.Name -eq 'ConsoleHost') {
 }
 
 function atom($path) {
-	$argument = '"' + ([System.IO.Path]::GetFullPath($path)) + '"'
+	$argument = '"' + (Resolve-PathSafe $path) + '"'
 	Start-Process atom $argument
 }
