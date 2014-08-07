@@ -3,15 +3,17 @@
 
 (server-start)
 
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;(add-to-list 'package-archives
+;  '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 (setq my-packages '(batch-mode
 					graphviz-dot-mode
 					gruber-darker-theme
+					haskell-mode
 					multiple-cursors
 					paredit
-					powershell))
+					powershell
+					rust-mode))
 (loop for p in my-packages
       when (not (package-installed-p p))
       do (package-install p))
@@ -43,6 +45,10 @@
 
 ;; proof general
 (load "ProofGeneral-4.2/generic/proof-site.el")
+
+;; SLIME
+(add-to-list 'load-path "./slime-2.9")
+(require 'slime-autoloads)
 
 ;; multiple-cursors
 (require 'multiple-cursors)
