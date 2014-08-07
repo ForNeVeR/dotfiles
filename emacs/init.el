@@ -47,6 +47,7 @@
 (load "ProofGeneral-4.2/generic/proof-site.el")
 
 ;; SLIME
+(add-to-list 'load-path (concat (file-name-directory load-file-name) "slime-2.9"))
 (load "slime-2.9/slime-autoloads.el")
 
 ;; multiple-cursors
