@@ -69,3 +69,7 @@
 
 (setq-default indent-tabs-mode t)
 (setq default-tab-width 4)
+
+(setq default-input-method "russian-computer")
+(set-fontset-font
+ nil '(#x1d539 . #x1d539) (font-spec :family "DejaVu Sans"))
