@@ -14,23 +14,6 @@ function Resolve-PathSafe($path) {
 	$ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
 }
 
-New-Alias emacs $Options.emacs
-
-function emacsclient($path) {
-	$emacsclient = $Options.emacsclient
-
-	try {
-		$path = Resolve-Path $path -ErrorAction Stop
-	} catch {
-	}
-
-	& $emacsclient `
-		-n `
-		--server-file "$env:HOME/.emacs.d/server/server" `
-		--alternate-editor $Options.emacs `
-		$path
-}
-
 if ($Host.Name -eq 'ConsoleHost') {
     Import-Module PSReadline
 }
