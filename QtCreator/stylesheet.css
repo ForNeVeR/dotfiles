@@ -3,8 +3,7 @@ QAbstractItemView,
 QTreeView::branch, 
 QTabBar::tab{
         color: #EAEAEA;
-        background: #333333; 
-        font-size: 9pt;
+        background: #333333;
 }
 
 QAbstractItemView::item:selected {
@@ -47,10 +46,6 @@ QTabBar::tab:selected {
      font: bold;
      border-color: #9B9B9B;
      border-bottom-color: #C2C7CB;
- }
-
-QTabBar::tab:!selected {
-     margin-top: 2px;
  }
 
 QHeaderView::section {
