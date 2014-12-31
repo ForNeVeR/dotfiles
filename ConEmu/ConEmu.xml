@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2014-12-19 19:29:16" build="141208">
+		<key name=".Vanilla" modified="2014-12-31 12:25:30" build="141208">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
-			<value name="StartTasksName" type="string" data="{Shells}"/>
+			<value name="StartTasksName" type="string" data="{Startup}"/>
 			<value name="StartFarFolders" type="hex" data="00"/>
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="ColorTable00" type="dword" data="00000000"/>
@@ -149,11 +149,11 @@
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd Width" type="dword" data="0000009e"/>
-			<value name="ConWnd Height" type="dword" data="0000003f"/>
+			<value name="ConWnd Width" type="dword" data="00000055"/>
+			<value name="ConWnd Height" type="dword" data="00000028"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="dword" data="00000500"/>
-			<value name="ConWnd Y" type="dword" data="fffffde9"/>
+			<value name="ConWnd X" type="dword" data="fffffff9"/>
+			<value name="ConWnd Y" type="dword" data="00000000"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -218,7 +218,7 @@
 			<value name="SendAltPrintScrn" type="hex" data="00"/>
 			<value name="SendPrintScrn" type="hex" data="00"/>
 			<value name="SendCtrlEsc" type="hex" data="00"/>
-			<value name="Min2Tray" type="hex" data="00"/>
+			<value name="Min2Tray" type="hex" data="01"/>
 			<value name="AlwaysShowTrayIcon" type="hex" data="00"/>
 			<value name="SafeFarClose" type="hex" data="01"/>
 			<value name="SafeFarCloseMacro" type="string" data=""/>
@@ -558,25 +558,17 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2014-12-19 19:29:16" build="141208">
+			<key name="Tasks" modified="2014-12-31 12:25:30" build="141208">
 				<value name="Count" type="dword" data="00000003"/>
-				<key name="Task1" modified="2014-12-19 19:29:16" build="141208">
+				<key name="Task1" modified="2014-12-31 12:25:30" build="141208">
 					<value name="Name" type="string" data="{Shells}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="&gt;* C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -new_console:d:T:\Temp"/>
+					<value name="Cmd1" type="string" data="&gt; C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -new_console:d:%TEMP%"/>
 					<value name="Active" type="dword" data="00000001"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task2" modified="2014-12-19 19:29:16" build="141208">
-					<value name="Name" type="string" data="{File Managers}"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="* &quot;C:\Program Files\Far Manager\Far.exe&quot;"/>
-					<value name="Active" type="dword" data="00000000"/>
-					<value name="Count" type="dword" data="00000001"/>
-				</key>
-				<key name="Task3" modified="2014-12-19 19:29:16" build="141208">
+				<key name="Task2" modified="2014-12-31 12:25:30" build="141208">
 					<value name="Name" type="string" data="{Putty}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
@@ -584,11 +576,20 @@
 					<value name="Active" type="dword" data="00000001"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
+				<key name="Task3" modified="2014-12-31 12:25:30" build="141208">
+					<value name="Name" type="string" data="{Startup}"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data="&gt;* C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -new_console:d:%TEMP%"/>
+					<value name="Active" type="dword" data="00000002"/>
+					<value name="Count" type="dword" data="00000002"/>
+					<value name="Cmd2" type="string" data="&gt; C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -new_console:d:%TEMP%"/>
+				</key>
 			</key>
-			<key name="Apps" modified="2014-12-19 19:29:16" build="141208">
+			<key name="Apps" modified="2014-12-31 12:25:30" build="141208">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<key name="Colors" modified="2014-12-19 19:29:16" build="141208">
+			<key name="Colors" modified="2014-12-31 12:25:30" build="141208">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
 		</key>
