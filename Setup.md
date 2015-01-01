@@ -8,6 +8,7 @@ Install Chocolatey, then:
     choco install conemu
     choco install keepass
     choco install git
+    choco install stduviewer
 
 Install Liberation Mono font.
 
