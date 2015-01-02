@@ -3,6 +3,11 @@ Installation procedure for Windows 10
 
     Set-ExecutionPolicy RemoteSigned
 
+Set up the environment variables:
+
+    $env:HOME = Resolve-Path ~
+    $env:USERNAME = $Options.UserName
+
 Install Chocolatey, then:
 
     choco install conemu
