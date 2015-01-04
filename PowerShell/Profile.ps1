@@ -4,6 +4,7 @@ param(
 
 $env:HOME = Resolve-Path ~
 $env:USERNAME = $Options.UserName
+$env:ALTERNATE_EDITOR = 'runemacs'
 
 function prompt {
 	Write-Host "PS $(Get-Location)>" -NoNewline -ForegroundColor White
