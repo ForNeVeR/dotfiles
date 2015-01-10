@@ -5,6 +5,7 @@ param(
 $env:HOME = Resolve-Path ~
 $env:USERNAME = $Options.UserName
 $env:ALTERNATE_EDITOR = 'runemacs'
+$env:PATH += ";$(Split-Path $PSScriptRoot -Parent)\Scripts\;"
 
 function prompt {
 	Write-Host "PS $(Get-Location)>" -NoNewline -ForegroundColor White
