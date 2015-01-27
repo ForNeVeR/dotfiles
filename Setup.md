@@ -6,7 +6,6 @@ Installation procedure for Windows 10
 Set up the environment variables:
 
     $env:HOME = Resolve-Path ~
-    $env:USERNAME = $Options.UserName
 
 Install Chocolatey, then:
 
