@@ -10,6 +10,7 @@ Set up the environment variables:
 Install Chocolatey, then:
 
     choco install conemu
+    choco install processhacker.install
     choco install keepass
     choco install git
     choco install stduviewer
