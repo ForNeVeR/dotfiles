@@ -4,6 +4,7 @@ param(
 
 $env:HOME = Resolve-Path ~
 $env:USERNAME = $Options.UserName
+$env:EDITOR = 'emacsclient'
 $env:ALTERNATE_EDITOR = 'runemacs'
 $env:PATH += ";$(Split-Path $PSScriptRoot -Parent)\Scripts\;"
 
