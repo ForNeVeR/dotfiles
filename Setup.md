@@ -19,6 +19,8 @@ Install Liberation Mono font.
 
 Install PSReadline (that's simply `Install-Module PSReadline` on recent systems).
 
+Install [posh-git](https://github.com/dahlbyk/posh-git).
+
 Clone dotfiles repository.
 
     md (Split-Path $PROFILE)

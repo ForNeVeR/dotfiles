@@ -8,20 +8,26 @@ $env:EDITOR = 'emacsclient'
 $env:ALTERNATE_EDITOR = 'runemacs'
 $env:PATH += ";$(Split-Path $PSScriptRoot -Parent)\Scripts\;"
 
-function prompt {
-	Write-Host "PS $(Get-Location)>" -NoNewline -ForegroundColor White
-	' '
+Import-Module posh-git
+
+function global:prompt {
+    $realLASTEXITCODE = $LASTEXITCODE
+    try {
+        # Reset color, which can be messed up by Enable-GitColors
+        $Host.UI.RawUI.ForegroundColor = $GitPromptSettings.DefaultForegroundColor
+        
+        Write-Host $pwd.ProviderPath -NoNewline -ForegroundColor White
+        Write-VcsStatus
+        Write-Host '>' -NoNewline -ForegroundColor White
+    } finally {
+        $global:LASTEXITCODE = $realLASTEXITCODE
+    }
+    
+    ' '
 }
 
-function Resolve-PathSafe($path) {
-	$ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($path)
-}
+Enable-GitColors
 
 if ($Host.Name -eq 'ConsoleHost') {
     Import-Module PSReadline
-}
-
-function atom($path) {
-	$argument = '"' + (Resolve-PathSafe $path) + '"'
-	Start-Process atom $argument
 }
