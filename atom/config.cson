@@ -1,0 +1,15 @@
+"*":
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    fontFamily: "Liberation Mono"
+    tabLength: 4
+  core:
+    autoHideMenuBar: true
+  "exception-reporting":
+    userId: "b797a3d9-7769-8b78-41c3-26c6ad5c3eab"
+  welcome:
+    showOnStartup: false
+  "atom-typescript": {}
+  linter: {}

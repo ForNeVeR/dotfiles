@@ -1,0 +1,9 @@
+packages: [
+  ".bin"
+  "atom-typescript"
+  "editorconfig"
+  "language-powershell"
+  "linter"
+  "minimap"
+  "package-sync"
+]
