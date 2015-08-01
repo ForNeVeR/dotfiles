@@ -5,6 +5,7 @@
     showInvisibles: true
     fontFamily: "Liberation Mono"
     tabLength: 4
+    softWrap: true
   core:
     autoHideMenuBar: true
   "exception-reporting":
