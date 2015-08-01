@@ -1,6 +1,5 @@
 packages: [
   "atom-typescript"
-  "autocomplete-bibtex"
   "autocomplete-haskell"
   "editorconfig"
   "haskell-ghc-mod"
