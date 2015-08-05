@@ -4,6 +4,7 @@ packages: [
   "editorconfig"
   "haskell-ghc-mod"
   "ide-haskell"
+  "language-batch"
   "language-docker"
   "language-ilasm"
   "language-gradle"
