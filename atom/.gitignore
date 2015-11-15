@@ -1,4 +1,5 @@
 /.apm/
+/electron/
 storage
 compile-cache
 dev

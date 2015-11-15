@@ -3,9 +3,11 @@
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
-    fontFamily: "Liberation Mono"
+    fontFamily: "'Classic Console'"
     tabLength: 4
     softWrap: true
+    fontSize: 21
+    lineHeight: 1
   core:
     autoHideMenuBar: true
   "exception-reporting":
@@ -17,3 +19,4 @@
   "markdown-preview":
     breakOnSingleNewline: true
   minimap: {}
+  "ide-haskell": {}
