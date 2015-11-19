@@ -16,5 +16,6 @@ packages: [
   "language-rust"
   "linter"
   "minimap"
+  "nix"
   "package-sync"
 ]
