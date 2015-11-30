@@ -1,4 +1,5 @@
 packages: [
+  "activate-power-mode"
   "atom-typescript"
   "autocomplete-haskell"
   "editorconfig"
