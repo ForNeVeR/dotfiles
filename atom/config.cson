@@ -1,13 +1,13 @@
 "*":
   editor:
-    invisibles: {}
+    invisibles:
+      tab: "⇒"
     showIndentGuide: true
     showInvisibles: true
-    fontFamily: "'Classic Console'"
+    fontFamily: "'Liberation Mono'"
     tabLength: 4
     softWrap: true
-    fontSize: 21
-    lineHeight: 1
+    lineHeight: 1.25
   core:
     autoHideMenuBar: true
   "exception-reporting":
@@ -20,3 +20,4 @@
     breakOnSingleNewline: true
   minimap: {}
   "ide-haskell": {}
+  "haskell-ghc-mod": {}
