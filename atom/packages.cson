@@ -7,6 +7,7 @@ packages: [
   "ide-haskell"
   "language-batch"
   "language-docker"
+  "language-idris"
   "language-ilasm"
   "language-gradle"
   "language-groovy"
