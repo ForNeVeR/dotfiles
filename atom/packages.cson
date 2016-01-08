@@ -15,6 +15,7 @@ packages: [
   "language-latex"
   "language-nginx"
   "language-powershell"
+  "language-restructuredtext"
   "language-rust"
   "language-textile"
   "linter"
