@@ -2,6 +2,9 @@
   "atom-typescript": {}
   core:
     autoHideMenuBar: true
+    disabledPackages: [
+      "spell-check"
+    ]
   editor:
     fontFamily: "'Liberation Mono'"
     invisibles:
