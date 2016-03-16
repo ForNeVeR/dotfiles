@@ -6,7 +6,7 @@
       "spell-check"
     ]
   editor:
-    fontFamily: "'Liberation Mono'"
+    fontFamily: "Hasklig"
     invisibles:
       tab: "⇒"
     lineHeight: 1.25
