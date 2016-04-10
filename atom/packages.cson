@@ -6,6 +6,7 @@ packages: [
   "haskell-ghc-mod"
   "ide-haskell"
   "language-batch"
+  "language-cjsx"
   "language-docker"
   "language-idris"
   "language-ilasm"
