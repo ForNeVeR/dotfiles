@@ -5,6 +5,10 @@
     disabledPackages: [
       "spell-check"
     ]
+    themes: [
+      "one-dark-ui"
+      "obsidian-syntax"
+    ]
   editor:
     fontFamily: "Hasklig"
     invisibles:
@@ -19,8 +23,7 @@
   "haskell-ghc-mod": {}
   "ide-haskell": {}
   linter: {}
-  "markdown-preview":
-    breakOnSingleNewline: true
+  "markdown-preview": {}
   minimap: {}
   welcome:
     showOnStartup: false

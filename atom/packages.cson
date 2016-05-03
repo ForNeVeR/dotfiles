@@ -8,6 +8,7 @@ packages: [
   "language-batch"
   "language-cjsx"
   "language-docker"
+  "language-factor"
   "language-idris"
   "language-ilasm"
   "language-gradle"
@@ -24,4 +25,5 @@ packages: [
   "minimap"
   "nix"
   "package-sync"
+  "pulsing-cursor"
 ]
