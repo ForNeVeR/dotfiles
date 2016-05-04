@@ -25,5 +25,8 @@
   linter: {}
   "markdown-preview": {}
   minimap: {}
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
   welcome:
     showOnStartup: false
