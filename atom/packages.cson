@@ -1,5 +1,6 @@
 packages: [
   ".bin"
+  "atom-jade"
   "atom-typescript"
   "autocomplete-haskell"
   "dev"
