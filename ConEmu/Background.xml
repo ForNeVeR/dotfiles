@@ -105,7 +105,7 @@
 		</panel>
 		<!--Drives-->
 		<panel type="DRIVE" drivetype="REMOVABLE">
-			<color rgb="#8cd900" shift="yes"/>
+			<color rgb="#649c00" shift="yes"/>
 			<title>Volume+" "+VolumeFree+"/"+VolumeSize</title>
 			<img ref="img/drive_removable.png"/>
 		</panel>
