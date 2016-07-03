@@ -31,3 +31,15 @@
     forceOverwrite: true
   welcome:
     showOnStartup: false
+".fsharp.fsi.source":
+  editor:
+    tabLength: 4
+".fsharp.fsl.source":
+  editor:
+    tabLength: 4
+".fsharp.fsx.source":
+  editor:
+    tabLength: 4
+".fsharp.source":
+  editor:
+    tabLength: 4
