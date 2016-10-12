@@ -5,13 +5,14 @@
     disabledPackages: [
       "spell-check"
     ]
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "obsidian-syntax"
     ]
   editor:
     fontFamily: "Hasklig"
-    fontSize: 15
+    fontSize: 13
     invisibles:
       tab: "⇒"
     lineHeight: 1.25

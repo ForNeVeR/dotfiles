@@ -37,6 +37,7 @@ packages: [
   "language-textile"
   "language-vbscript"
   "linter"
+  "linter-write-good"
   "lucid-tabs"
   "minimap"
   "nix"
