@@ -13,7 +13,7 @@ function Generate-Secret {
         (Generate-Diapason 'A' 'Z') +
         (Generate-Diapason '0' '9')
 
-    $length = 128
+    $length = 48
 
     $provider = New-Object Security.Cryptography.RNGCryptoServiceProvider
     try {
@@ -37,4 +37,5 @@ if (Test-Path $SecretFile) {
     $secret | Out-File $SecretFile -Encoding utf8
 }
 
+Set-Location $env:TEMP
 aria2c --enable-rpc --rpc-allow-origin-all=true --summary-interval=0 --rpc-secret=$secret
