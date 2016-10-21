@@ -5,7 +5,6 @@ packages: [
   "atom-typescript"
   "atom-yeoman"
   "autocomplete-haskell"
-  "dev"
   "editorconfig"
   "haskell-ghc-mod"
   "ide-haskell"
