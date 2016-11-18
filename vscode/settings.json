@@ -1,6 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
-	"editor.fontFamily": "Hasklig",
+	"editor.fontFamily": "Fixedsys Excelsior",
+	"editor.fontSize": 16,
 	"editor.fontLigatures": true,
 	"editor.rulers": [
 		80, 100, 120
