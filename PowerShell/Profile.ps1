@@ -1,33 +1,26 @@
-param(
-	$Options
-)
-
-$env:HOME = Resolve-Path ~
-$env:USERNAME = $Options.UserName
-$env:EDITOR = 'emacsclient'
-$env:ALTERNATE_EDITOR = 'runemacs'
+﻿$env:EDITOR = 'code -w'
 $env:PATH += ";$(Split-Path $PSScriptRoot -Parent)\Scripts\;"
-
-Import-Module posh-git
-
-function global:prompt {
-    $realLASTEXITCODE = $LASTEXITCODE
-    try {
-        # Reset color, which can be messed up by Enable-GitColors
-        $Host.UI.RawUI.ForegroundColor = $GitPromptSettings.DefaultForegroundColor
-        
-        Write-Host $pwd.ProviderPath -NoNewline -ForegroundColor White
-        Write-VcsStatus
-        Write-Host '>' -NoNewline -ForegroundColor White
-    } finally {
-        $global:LASTEXITCODE = $realLASTEXITCODE
-    }
-    
-    ' '
-}
-
-Enable-GitColors
 
 if ($Host.Name -eq 'ConsoleHost') {
     Import-Module PSReadline
+}
+
+if (Get-Module oh-my-posh) {
+    $ThemeSettings.GitSymbols.BranchSymbol = ''
+    $ThemeSettings.GitSymbols.BranchUntrackedSymbol = ''
+    $ThemeSettings.GitSymbols.BranchIdenticalStatusToSymbol = '≡'
+    $ThemeSettings.GitSymbols.BranchAheadStatusSymbol = '↑'
+    $ThemeSettings.GitSymbols.BranchBehindStatusSymbol = '↓'
+    $ThemeSettings.PromptSymbols.ElevatedSymbol = '👑'
+    $ThemeSettings.PromptSymbols.FailedCommandSymbol = 'x'
+    $ThemeSettings.Colors.AdminIconForegroundColor = [ConsoleColor]::Yellow
+    $ThemeSettings.Colors.PromptBackgroundColor = [ConsoleColor]::Gray
+    $ThemeSettings.Colors.PromptForegroundColor = 'Black'
+    $ThemeSettings.Colors.SessionInfoBackgroundColor = [ConsoleColor]::DarkGreen
+    $ThemeSettings.Colors.SessionInfoForegroundColor = [ConsoleColor]::Black
+    $ThemeSettings.Colors.GitLocalChangesColor = [ConsoleColor]::DarkYellow
+}
+
+if (Get-Module PSReadline) {
+    Set-PSReadlineOption -TokenKind Command -ForegroundColor Gray
 }
