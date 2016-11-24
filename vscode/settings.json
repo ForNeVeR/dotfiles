@@ -3,6 +3,7 @@
 	"editor.fontFamily": "Fixedsys Excelsior",
 	"editor.fontSize": 16,
 	"editor.fontLigatures": true,
+	"editor.lineHeight": 16,
 	"editor.rulers": [
 		80, 100, 120
 	],
