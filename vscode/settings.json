@@ -10,5 +10,6 @@
 	"files.trimTrailingWhitespace": true,
 	"telemetry.enableTelemetry": false,
 	"editor.cursorBlinking": "smooth",
-	"editor.renderWhitespace": "boundary"
+    "editor.renderWhitespace": "boundary",
+    "window.zoomLevel": 0
 }
