@@ -1,15 +1,24 @@
 // Place your settings in this file to overwrite the default settings
 {
-	"editor.fontFamily": "Fixedsys Excelsior",
-	"editor.fontSize": 16,
-	"editor.fontLigatures": true,
-	"editor.lineHeight": 16,
-	"editor.rulers": [
-		80, 100, 120
-	],
-	"files.trimTrailingWhitespace": true,
-	"telemetry.enableTelemetry": false,
-	"editor.cursorBlinking": "smooth",
+    "editor.fontFamily": "Liberation Mono",
+    "editor.fontSize": 13,
+    "editor.rulers": [
+        80, 100, 120
+    ],
+    "files.trimTrailingWhitespace": true,
+    "powershell.startAutomatically": false,
+    "telemetry.enableTelemetry": false,
+    "editor.cursorBlinking": "smooth",
     "editor.renderWhitespace": "boundary",
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "editor.wordWrap": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.iconTheme": "vs-seti",
+    "editor.minimap.enabled": true,
+    "[cpp]": {
+        "editor.quickSuggestions": false
+    },
+    "[c]": {
+        "editor.quickSuggestions": false
+    }
 }
