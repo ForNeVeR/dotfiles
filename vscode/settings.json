@@ -1,12 +1,12 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.fontFamily": "Liberation Mono",
+    "editor.fontFamily": "Iosevka",
+    "editor.fontLigatures": true,
     "editor.fontSize": 13,
     "editor.rulers": [
         80, 100, 120
     ],
     "files.trimTrailingWhitespace": true,
-    "powershell.startAutomatically": false,
     "telemetry.enableTelemetry": false,
     "editor.cursorBlinking": "smooth",
     "editor.renderWhitespace": "boundary",
@@ -15,10 +15,11 @@
     "workbench.colorTheme": "Visual Studio Dark",
     "workbench.iconTheme": "vs-seti",
     "editor.minimap.enabled": true,
-    "[cpp]": {
-        "editor.quickSuggestions": false
-    },
     "[c]": {
         "editor.quickSuggestions": false
-    }
+    },
+    "typescript.check.tscVersion": false,
+    "workbench.welcome.enabled": false,
+    "cmake.cmakePath": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+    "languageTool.language": "en"
 }
