@@ -13,6 +13,7 @@ if (Get-Module oh-my-posh) {
     $ThemeSettings.GitSymbols.BranchBehindStatusSymbol = '↓'
     $ThemeSettings.PromptSymbols.ElevatedSymbol = '👑'
     $ThemeSettings.PromptSymbols.FailedCommandSymbol = 'x'
+    $ThemeSettings.PromptSymbols.VirtualEnvSymbol = '🐍'
     $ThemeSettings.Colors.AdminIconForegroundColor = [ConsoleColor]::Yellow
     $ThemeSettings.Colors.PromptBackgroundColor = [ConsoleColor]::Gray
     $ThemeSettings.Colors.PromptForegroundColor = 'Black'
