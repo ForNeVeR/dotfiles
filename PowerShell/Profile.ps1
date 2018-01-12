@@ -23,5 +23,7 @@ if (Get-Module oh-my-posh) {
 }
 
 if (Get-Module PSReadline) {
-    Set-PSReadlineOption -TokenKind Command -ForegroundColor Gray
+    Set-PSReadlineOption -Colors @{
+        "Command" = [ConsoleColor]::Gray
+    }
 }
