@@ -20,5 +20,36 @@
     "workbench.welcome.enabled": false,
     "cmake.cmakePath": "C:\\Program Files\\CMake\\bin\\cmake.exe",
     "languageTool.language": "en",
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "latex-workshop.debug.showUpdateMessage": false,
+    "flow.useNPMPackagedFlow": true,
+    "rust.rustup": {
+        "toolchain": "stable-x86_64-pc-windows-msvc",
+        "nightlyToolchain": "nightly-x86_64-pc-windows-msvc"
+    },
+    "rust.mode": "rls",
+    "rust.rls": {
+        "useRustfmt": true
+    },
+    "latex-workshop.latex.tools": [
+        {
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-xelatex",
+                "%DOC%"
+            ],
+            "name": "Step 1: latexmk"
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "toolchain",
+            "tools": [
+                "Step 1: latexmk"
+            ]
+        }
+    ]
 }
