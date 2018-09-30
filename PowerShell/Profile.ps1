@@ -21,9 +21,3 @@ if (Get-Module oh-my-posh) {
     $ThemeSettings.Colors.SessionInfoForegroundColor = [ConsoleColor]::Black
     $ThemeSettings.Colors.GitLocalChangesColor = [ConsoleColor]::DarkYellow
 }
-
-if (Get-Module PSReadline) {
-    Set-PSReadlineOption -Colors @{
-        "Command" = [ConsoleColor]::Gray
-    }
-}
